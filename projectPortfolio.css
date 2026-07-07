@@ -1,0 +1,378 @@
+/* ===========================================
+   GOOGLE FONTS
+=========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================================
+   RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================================
+   VARIABLES
+=========================================== */
+
+:root{
+
+    --primary:#0F766E;
+    --primary-dark:#115E59;
+    --secondary:#14B8A6;
+
+    --white:#fff;
+
+    --gray:#6B7280;
+    --light:#F8FAFC;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+header{
+
+    background:linear-gradient(135deg,#0F766E,#14B8A6);
+
+    color:white;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+}
+
+header h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+header p{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    opacity:.9;
+
+}
+
+/* ===========================================
+   NAVBAR
+=========================================== */
+
+nav{
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:18px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+nav a{
+
+    color:#333;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================================
+   SECTION
+=========================================== */
+
+.section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:70px 0;
+
+}
+
+/* ===========================================
+   FEATURED
+=========================================== */
+
+.featured-content{
+
+    text-align:center;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.featured-content h2{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+.featured-content p{
+
+    color:var(--gray);
+
+    font-size:18px;
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+/* ===========================================
+   COURSE GRID
+=========================================== */
+
+.course-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+/* ===========================================
+   COURSE CARD
+=========================================== */
+
+.course-card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    animation:fadeUp .8s ease;
+
+}
+
+.course-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.course-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.course-card h3{
+
+    padding:20px 20px 10px;
+
+    color:var(--primary);
+
+    font-size:22px;
+
+}
+
+.course-card p{
+
+    padding:0 20px;
+
+    color:var(--gray);
+
+    margin-bottom:12px;
+
+}
+
+.course-card:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.learn-more{
+
+    display:inline-block;
+
+    margin:20px;
+
+    padding:12px 25px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:linear-gradient(135deg,#0F766E,#14B8A6);
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.learn-more:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(20,184,166,.4);
+
+}
+
+/* ===========================================
+   COMMON BUTTON
+=========================================== */
+
+.btn{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    background:linear-gradient(135deg,#0F766E,#14B8A6);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
