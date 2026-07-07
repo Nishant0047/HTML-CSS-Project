@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .course-details, .upcoming-courses, .ongoing-courses, .promotional-display {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .course-details h2, .upcoming-courses h2, .ongoing-courses h2, .promotional-display h2 {
+            margin-top: 0;
+        }
+        .course-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .course-item h3 {
+            margin: 0 0 10px;
+        }
+        .course-item p {
+            margin: 5px 0;
+        }
+        .learn-more-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .learn-more-btn:hover {
+            background-color: #0056b3;
+        }
+        .promotional-display {
+            background-color: #ffdd57;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Detailed Course Page -->
+        <div class="course-details">
+            <h2>Detailed Course Page</h2>
+            <div class="course-item">
+                <h3>Course Title: Web Development Bootcamp</h3>
+                <p><strong>Duration:</strong> 8 Weeks</p>
+                <p><strong>Syllabus:</strong> HTML, CSS, JavaScript, React, Node.js</p>
+                <p><strong>Description:</strong> A comprehensive course to become a full-stack web developer.</p>
+                <p><strong>Promotional Discount:</strong> 20% off until October 31st!</p>
+            </div>
+        </div>
+
+        <!-- Upcoming Courses/Workshops Section -->
+        <div class="upcoming-courses">
+            <h2>Upcoming Courses/Workshops</h2>
+            <div class="course-item">
+                <h3>Course: Data Science Fundamentals</h3>
+                <p><strong>Start Date:</strong> November 15, 2023</p>
+                <p><strong>Duration:</strong> 6 Weeks</p>
+                <button class="learn-more-btn" onclick="viewCourseDetails('Data Science Fundamentals')">Learn More</button>
+            </div>
+            <div class="course-item">
+                <h3>Workshop: UI/UX Design</h3>
+                <p><strong>Start Date:</strong> December 1, 2023</p>
+                <p><strong>Duration:</strong> 2 Days</p>
+                <button class="learn-more-btn" onclick="viewCourseDetails('UI/UX Design')">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Ongoing Courses Section -->
+        <div class="ongoing-courses">
+            <h2>Ongoing Courses</h2>
+            <div class="course-item">
+                <h3>Course: Advanced JavaScript</h3>
+                <p><strong>Progress:</strong> Week 3 of 8</p>
+                <button class="learn-more-btn" onclick="viewCourseDetails('Advanced JavaScript')">Learn More</button>
+            </div>
+            <div class="course-item">
+                <h3>Course: Python for Beginners</h3>
+                <p><strong>Progress:</strong> Week 5 of 6</p>
+                <button class="learn-more-btn" onclick="viewCourseDetails
